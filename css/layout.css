@@ -1,0 +1,96 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sana+TC:100,300,400,500,700,900&display=swap');
+html,body{
+	font-family: 'Noto Sans Tc',sans-serif;
+}
+
+/*主畫面*/
+.wrap_box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	position: relative;
+}
+.wrap{
+	background-color: #0F0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 600px;
+	height: 600px;
+	border: 1px solid #0F0;
+}
+.wrap_box .item{
+	box-sizing: border-box;
+	border: 1px solid #F00;
+	width: 100px;
+	height: 100px;
+	background-color: #cc0;
+	position: relative;
+}
+.random_item{
+	width: 100px;
+	height: 100px;
+	background-color: #aaa;
+	position: absolute;
+	top: 120px;
+	left: 120px;
+}
+/*主畫面*/
+
+
+/*材料包*/
+.grass01::after,
+.grass02::after,
+.grass03::after,
+.grass04::after,
+.grass05::after,
+.grass06::after{
+	/*草地*/
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: #0F0;
+	text-align: center;
+	margin: auto;
+	font-size: 20px;
+	line-height: 100px;
+}
+.grass01::after{
+	/*草地一階*/
+	content: 'G1';
+	background-color: #0F0;
+}
+.grass02::after{
+	/*草地二階*/
+	content: 'G2';
+	background-color: #0E0;
+}
+.grass03::after{
+	/*草地三階*/
+	content: 'G3';
+	background-color: #0D0;
+}
+.grass04::after{
+	/*草地四階*/
+	content: 'G4';
+	background-color: #0C0;
+}
+.grass05::after{
+	/*草地五階*/
+	content: 'G5';
+	background-color: #0B0;
+}
+.grass06::after{
+	/*草地六階*/
+	content: 'G6';
+	background-color: #0A0;
+}
+
+
+
+/*材料包*/
+
+
+
