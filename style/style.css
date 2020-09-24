@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sana+TC:100,300,400,500,700,900&display=swap");
+html,
+body {
+  font-family: 'Noto Sans Tc', sans-serif;
+}
+
+/* 外層盒子樣式 */
+.grass01::after, .grass02::after, .grass03::after, .grass04::after, .grass05::after, .grass06::after {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  line-height: 100px;
+}
+
+/*主畫面*/
+.wrap_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.wrap_box > .random_item {
+  width: 100px;
+  height: 100px;
+  background-color: #aaa;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+}
+
+.wrap_box > .wrap {
+  background-color: #0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #0f0;
+}
+
+.wrap_box > .wrap .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #f00;
+  width: 100px;
+  height: 100px;
+  background-color: #cc0;
+  position: relative;
+}
+
+/*主畫面*/
+/*材料包*/
+.grass01::after {
+  /*草地一階*/
+  content: 'G1';
+  background-color: #0f0;
+}
+
+.grass02::after {
+  /*草地二階*/
+  content: 'G2';
+  background-color: #0e0;
+}
+
+.grass03::after {
+  /*草地三階*/
+  content: 'G3';
+  background-color: #0d0;
+}
+
+.grass04::after {
+  /*草地四階*/
+  content: 'G4';
+  background-color: #0c0;
+}
+
+.grass05::after {
+  /*草地五階*/
+  content: 'G5';
+  background-color: #0b0;
+}
+
+.grass06::after {
+  /*草地六階*/
+  content: 'G6';
+  background-color: #0a0;
+}
+
+/*材料包*/
