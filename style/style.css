@@ -7,7 +7,7 @@ body {
 }
 
 /* 外層盒子樣式 */
-.grass01::after, .grass02::after, .grass03::after, .grass04::after, .grass05::after, .grass06::after {
+.grass1::after, .grass2::after, .grass3::after, .grass4::after, .grass5::after, .grass6::after {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -66,37 +66,37 @@ body {
 
 /*主畫面*/
 /*材料包*/
-.grass01::after {
+.grass1::after {
   /*草地一階*/
   content: 'G1';
   background-color: #0f0;
 }
 
-.grass02::after {
+.grass2::after {
   /*草地二階*/
   content: 'G2';
   background-color: #0e0;
 }
 
-.grass03::after {
+.grass3::after {
   /*草地三階*/
   content: 'G3';
   background-color: #0d0;
 }
 
-.grass04::after {
+.grass4::after {
   /*草地四階*/
   content: 'G4';
   background-color: #0c0;
 }
 
-.grass05::after {
+.grass5::after {
   /*草地五階*/
   content: 'G5';
   background-color: #0b0;
 }
 
-.grass06::after {
+.grass6::after {
   /*草地六階*/
   content: 'G6';
   background-color: #0a0;
