@@ -189,18 +189,27 @@ function setRandomProps() {
 function setNextProps() {
     setRandomProps(); // 產生隨機素材
     let randomItem = document.querySelector('.random_item'); //用來選取'下一格'
-    let tmpAry = randomItem.className.split(' '); // 因為不確定後續會不會增加Class 所以移除上一個素材時 直接移除 最後一個 className
-    if (tmpAry.length > 1) randomItem.classList.remove(tmpAry[tmpAry.length - 1]); // 清除'下一格'原先素材
+    // 剛產生時沒有 data-type
+    if (randomItem.dataset.type) {
+        let className = propsObj[randomItem.dataset.type]['level' + randomItem.dataset.level].className;
+        randomItem.classList.remove(className); // 清除'下一格'原先素材
+    }
     let randomProps = randomPropsAry[Math.floor(Math.random() * randomPropsAry.length)]; // 從設定好的陣列素材裡隨機挑選物品
     randomItem.dataset.type = randomProps.type; // '下一格'類型
     randomItem.dataset.level = randomProps.level; // '下一格'階級
     randomItem.classList.add(randomProps.className); // 將隨機產生的素材放入'下一格'
 }
 // 合成邏輯判斷
-function doEvolution() {
+function doEvolution(dom) {
+    // 中心點
+    let x = dom.dataset.posX;
+    let y = dom.dataset.posY;
+    // 所有資料
+    // floorObj;
     // ------ start ------
     console.log('合成邏輯判斷');
     // 可以在這邊寫合成邏輯
+
     // ------ end ------
 }
 // 監聽&動作事件
