@@ -1,10 +1,10 @@
 const FLOOR_X = 6; // 橫格子數量
 const FLOOR_Y = 6; // 縱格子數量
-var util = null; // 工具包
-var listenEvent = null; // 監聽&動作事件
-var randomPropsAry = new Array(); // 素材隨機陣列(把使用到的素材物件,依照計算的比例丟入)
-var propsObj = new Object(); // 各個類型的素材資料
-var floorObj = new Object(); // 所有可操作地板素材
+let util = null; // 工具包
+let listenEvent = null; // 監聽&動作事件
+let randomPropsAry = new Array(); // 素材隨機陣列(把使用到的素材物件,依照計算的比例丟入)
+let propsObj = new Object(); // 各個類型的素材資料
+let floorObj = new Object(); // 所有可操作地板素材
 
 window.addEventListener('load', init, false);
 
@@ -22,17 +22,17 @@ function init() {
 // 建構素材資料
 function buildPropsData() {
     /*
-        { 
-            物品類型: { 
-                物品階級: { 
-                    level: '階級',
-                    type: '類型',
-                    name: '物品名稱',
-                    remark:'備註',
-                }
+    { 
+        物品類型: { 
+            物品階級: { 
+                level: '階級',
+                type: '類型',
+                name: '物品名稱',
+                remark:'備註',
             }
         }
-        */
+    }
+    */
     propsObj = {
         grave: {
             level1: {
@@ -99,19 +99,19 @@ function buildPropsData() {
 // 建構地板資料
 function buildFloorData() {
     /*
-        { 
-            X座標: { 
-                Y座標: { 
-                    posX: '地板所在X',
-                    posY: '地板所在Y',
-                    level: '素材階級',
-                    type: '素材類型',
-                    id: '物件id',
-                    dom: '物件',
-                }
+    { 
+        X座標: { 
+            Y座標: { 
+                posX: '地板所在X',
+                posY: '地板所在Y',
+                level: '素材階級',
+                type: '素材類型',
+                id: '物件id',
+                dom: '物件',
             }
         }
-        */
+    }
+    */
     let count = 1;
     for (let i = 0; i < FLOOR_X; i++) {
         floorObj[i] = new Object();
@@ -196,10 +196,10 @@ function setNextProps() {
     randomItem.dataset.level = randomProps.level; // '下一格'階級
     randomItem.classList.add(randomProps.className); // 將隨機產生的素材放入'下一格'
 }
-// 合成判斷
+// 合成邏輯判斷
 function doEvolution() {
     // ------ start ------
-    console.log('合成判斷');
+    console.log('合成邏輯判斷');
     // 可以在這邊寫合成邏輯
     // ------ end ------
 }
@@ -223,7 +223,7 @@ function ListenEvent() {
             let randomProps = propsObj[randomItem.dataset.type]['level' + randomItem.dataset.level]; // 從'下一格'拿取素材
             floorObj[dom.dataset.posX][dom.dataset.posY]['type'] = randomProps.type; // 將地板類型資料替換掉
             floorObj[dom.dataset.posX][dom.dataset.posY]['level'] = randomProps.level; // 將地板階級資料替換掉
-            doEvolution(dom); // 合成判斷
+            doEvolution(dom); // 合成邏輯判斷
             setView(); // 產生畫面
             setNextProps(); //產生新'下一格'資料
         }
