@@ -11,5 +11,5 @@
     // 縮排空格調整為四格
     "prettier.tabWidth": 4,
     //超過最大值換行
-    "prettier.printWidth": 100
+    "prettier.printWidth": 1000
 }
