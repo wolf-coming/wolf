@@ -1,9 +1,8 @@
 // 巢狀 變數 繼承 混用 函式 判斷 迴圈
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sana+TC:100,300,400,500,700,900&display=swap');
 html,
 body {
-  font-family: 'Noto Sans Tc', sans-serif;
+    font-family: 'Noto Sans Tc', sans-serif;
 }
 // 方塊寬
 $box_width: 100px;
@@ -13,46 +12,46 @@ $box_height: 100px;
 $grass_background: #0f0;
 /* 外層盒子樣式 */
 %onBox {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  margin: auto;
-  font-size: 20px;
-  line-height: 100px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    line-height: 100px;
 }
 /*主畫面*/
 .wrap_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  position: relative;
-  > .random_item {
-    width: $box_width;
-    height: $box_height;
-    background-color: #aaa;
-    position: absolute;
-    top: 120px;
-    left: 120px;
-  }
-  > .wrap {
-    background-color: $grass_background;
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 600px;
-    height: 600px;
-    border: 1px solid $grass_background;
-    .item {
-      box-sizing: border-box;
-      border: 1px solid #f00;
-      width: $box_width;
-      height: $box_height;
-      background-color: #cc0;
-      position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    > .random_item {
+        width: $box_width;
+        height: $box_height;
+        background-color: #aaa;
+        position: absolute;
+        top: 120px;
+        left: 120px;
     }
-  }
+    > .wrap {
+        background-color: $grass_background;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 600px;
+        height: 600px;
+        border: 1px solid $grass_background;
+        .item {
+            box-sizing: border-box;
+            border: 1px solid #f00;
+            width: $box_width;
+            height: $box_height;
+            background-color: #cc0;
+            position: relative;
+        }
+    }
 }
 
 /*主畫面*/
@@ -60,40 +59,40 @@ $grass_background: #0f0;
 /*材料包*/
 
 .grass1::after {
-  /*草地一階*/
-  content: 'G1';
-  background-color: #0f0;
-  @extend %onBox;
+    /*草地一階*/
+    content: 'G1';
+    background-color: #0f0;
+    @extend %onBox;
 }
 .grass2::after {
-  /*草地二階*/
-  content: 'G2';
-  background-color: #0e0;
-  @extend %onBox;
+    /*草地二階*/
+    content: 'G2';
+    background-color: #0e0;
+    @extend %onBox;
 }
 .grass3::after {
-  /*草地三階*/
-  content: 'G3';
-  background-color: #0d0;
-  @extend %onBox;
+    /*草地三階*/
+    content: 'G3';
+    background-color: #0d0;
+    @extend %onBox;
 }
 .grass4::after {
-  /*草地四階*/
-  content: 'G4';
-  background-color: #0c0;
-  @extend %onBox;
+    /*草地四階*/
+    content: 'G4';
+    background-color: #0c0;
+    @extend %onBox;
 }
 .grass5::after {
-  /*草地五階*/
-  content: 'G5';
-  background-color: #0b0;
-  @extend %onBox;
+    /*草地五階*/
+    content: 'G5';
+    background-color: #0b0;
+    @extend %onBox;
 }
 .grass6::after {
-  /*草地六階*/
-  content: 'G6';
-  background-color: #0a0;
-  @extend %onBox;
+    /*草地六階*/
+    content: 'G6';
+    background-color: #0a0;
+    @extend %onBox;
 }
 
 /*材料包*/
