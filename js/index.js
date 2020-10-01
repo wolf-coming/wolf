@@ -24,7 +24,7 @@
         clickItem.forEach(function (value) {
             value.addEventListener('click', function () {
                 // 判斷data-status = 0 且 有隨機道具時執行下面程式
-                if (value.dataset.status == 0 && randomName) {
+                if (value.dataset.status === '0' && randomName) {
                     value.classList.add(randomName); // 給地板道具
                     randomItem.classList.remove(randomName); // 清除左側單一框'使用道具'
                     randomName = propsAry[Math.floor(Math.random() * propsAry.length)]; // 隨機物品一個新的'使用道具'
